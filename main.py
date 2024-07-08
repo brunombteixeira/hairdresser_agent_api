@@ -7,6 +7,7 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
+    print("Changes made")
     return {"message": "Hello World"}
 
 @app.get("/items/{item_id}")
