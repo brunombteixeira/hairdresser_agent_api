@@ -7,11 +7,11 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def send_custom_message(content: str, recipient: str):
-    url = f"https://graph.facebook.com/{os.getenv("VERSION")}/{os.getenv("PHONE_NUMBER_ID")}/messages"
+    url = f"https://graph.facebook.com/{os.environ.get("VERSION")}/{os.environ.get("PHONE_NUMBER_ID")}/messages"
     headers = (
         {
             "Content-type":"application/json",
-            "Authorization": f"Bearer {os.getenv("ACCESS_TOKEN")}"
+            "Authorization": f"Bearer {os.environ.get("ACCESS_TOKEN")}"
         }
     )
     data = ({

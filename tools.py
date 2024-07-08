@@ -10,13 +10,13 @@ from typing_extensions import Dict
 from langchain.tools import BaseTool, StructuredTool, Tool, tool
 
 load_dotenv()
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 
 url = "https://api.calendly.com"
 
 headers = {
     "Content-Type": "application/json",
-    "Authorization": f"Bearer {os.getenv("CALENDLY_API_KEY")}"
+    "Authorization": f"Bearer {os.environ.get("CALENDLY_API_KEY")}"
 }
 
 def process_general_info() -> list:

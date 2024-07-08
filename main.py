@@ -23,7 +23,7 @@ app.add_middleware(
     allow_headers=["*"],  # Allows all headers
 )
 
-VERIFY_TOKEN = os.getenv("WHATSAPP_VERIFY_TOKEN")
+VERIFY_TOKEN = os.environ.get("WHATSAPP_VERIFY_TOKEN")
 
 @app.get("/")
 async def root():
