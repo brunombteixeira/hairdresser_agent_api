@@ -16,7 +16,7 @@ url = "https://api.calendly.com"
 
 headers = {
     "Content-Type": "application/json",
-    "Authorization": f"Bearer {os.environ.get("CALENDLY_API_KEY")}"
+    "Authorization": f"Bearer {os.environ.get('CALENDLY_API_KEY')}"
 }
 
 def process_general_info() -> list:
