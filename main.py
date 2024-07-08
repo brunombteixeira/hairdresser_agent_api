@@ -9,8 +9,9 @@ from fastapi.responses import PlainTextResponse
 
 import logging
 logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 
-app = FastAPI()
+app = FastAPI(debug=True)
 
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -30,6 +31,7 @@ async def root():
 
 @app.get("/test")
 async def test():
+    logger.debug("Test route accessed")
     try:
         return {"message": "This is a test call"}
     except Exception as e:

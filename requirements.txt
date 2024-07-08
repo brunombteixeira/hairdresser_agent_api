@@ -1,4 +1,4 @@
-fastapi[all]
+fastapi
 langgraph
 langchain
 langchain-community
@@ -12,3 +12,4 @@ pypdf
 streamlit
 requests
 supabase
+uvicorn
