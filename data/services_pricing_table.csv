@@ -1,0 +1,7 @@
+Serviço;Custo (em euros);Tempo (em minutos)
+Corte de Cabelo;12;45
+Corte de Cabelo com Fade;16;60
+Corte de Barba;8;15
+Corte de Cabelo + Corte de Barba;14;60
+Corde de Cabelo com Fade + Corte de Barba;20;75
+Corte de Cabelo Criança (até 10 anos);8;30

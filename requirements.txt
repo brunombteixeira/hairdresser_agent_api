@@ -1,1 +1,14 @@
 fastapi[all]
+langgraph
+langchain
+langchain-community
+langchain_openai
+langchain-text-splitters
+langchain-openai
+langchainhub
+faiss-cpu
+python-dotenv
+pypdf
+streamlit
+requests
+supabase
