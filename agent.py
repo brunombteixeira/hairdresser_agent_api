@@ -1,7 +1,7 @@
 import os
 from datetime import datetime
 from dotenv import load_dotenv
-from supabase_functions import supa_insert_data, supa_fetch_data
+from db_functions import supa_insert_data, supa_fetch_data
 
 load_dotenv()
 

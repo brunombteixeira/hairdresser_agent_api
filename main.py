@@ -1,7 +1,7 @@
 import os
 from agent import create_agent
 from whatsapp_functions import send_custom_message
-from supabase_functions import supa_fetch_data, supa_insert_data
+from db_functions import supa_fetch_data, supa_insert_data
 from dotenv import load_dotenv
 from fastapi import FastAPI, Request
 from fastapi.responses import PlainTextResponse
