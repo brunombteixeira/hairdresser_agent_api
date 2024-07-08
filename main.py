@@ -18,6 +18,10 @@ VERIFY_TOKEN = os.getenv("WHATSAPP_VERIFY_TOKEN")
 async def root():
     return {"message": "Hello World"}
 
+@app.get("/test")
+async def test():
+    return {"message": "This is a test call"}
+
 @app.get("/webhook")
 async def handle_webhook(request: Request):
     logging.debug(f"Received webhook request: {request.query_params}")
