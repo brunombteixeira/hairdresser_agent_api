@@ -12,6 +12,16 @@ logging.basicConfig(level=logging.DEBUG)
 
 app = FastAPI()
 
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
+)
+
 VERIFY_TOKEN = os.getenv("WHATSAPP_VERIFY_TOKEN")
 
 @app.get("/")
@@ -20,7 +30,15 @@ async def root():
 
 @app.get("/test")
 async def test():
-    return {"message": "This is a test call"}
+    try:
+        return {"message": "This is a test call"}
+    except Exception as e:
+        logging.error(f"Error in /test route: {str(e)}")
+        raise
+
+@app.get("/health")
+async def health_check():
+    return {"status": "healthy"}
 
 @app.get("/webhook")
 async def handle_webhook(request: Request):
