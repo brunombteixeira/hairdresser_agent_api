@@ -4,8 +4,8 @@ from supabase import create_client, Client
 
 # load_dotenv()
 
-url: str = "https://miquuhqxuttacqjfeodh.supabase.co"
-key: str = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1pcXV1aHF4dXR0YWNxamZlb2RoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjAzOTI5NjAsImV4cCI6MjAzNTk2ODk2MH0.GBUaCJGxd8d0oRo0qIvBls6v_6zZUq--QsATjA7DYpo"
+url: str = os.environ.get("SUPABASE_URL")
+key: str = os.environ.get("SUPABASE_KEY")
 
 supabase: Client = create_client(url, key)
 
